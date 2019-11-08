@@ -1,0 +1,17 @@
+.container {
+  height: 60px;
+  background: linear-gradient(#0098fe, #0167fd);
+  padding: 0 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3);
+
+  .site-name {
+    font-size: 34px;
+    color: white;
+    font-weight: 600;
+    text-shadow: rgba(0, 0, 0, 0.1) 2px 3px;
+    text-decoration: none;
+  }
+}
