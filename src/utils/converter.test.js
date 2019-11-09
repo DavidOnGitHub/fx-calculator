@@ -2,15 +2,15 @@ import { getRate, getDecimals } from './converter';
 import { rateMatrix } from '../config/rateMatrix';
 
 describe('getRate', () => {
-  it('should get direct rate if there is direct relationship', () => {
+  it('should get direct rate if there is direct rate', () => {
     expect(getRate('AUD', 'USD')).toBe(rateMatrix.AUD.USD);
   });
-  it('should get inverted direct rate if there is direct relationship', () => {
+  it('should get inverted direct rate if there is direct rate', () => {
     const invertRate = 1 / rateMatrix.AUD.USD;
     expect(getRate('USD', 'AUD')).toBe(invertRate);
   });
 
-  it('should get cross rate if there is no direct relationship', () => {
+  it('should get cross rate if there is no direct rate', () => {
     expect(getRate('AUD', 'DKK')).toBe(
       rateMatrix.AUD.USD * (1 / rateMatrix.EUR.USD) * rateMatrix.EUR.DKK
     );
